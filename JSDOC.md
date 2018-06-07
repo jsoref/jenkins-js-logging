@@ -11,7 +11,7 @@ Create a [Logger] instance for logging to the specified category.
 
 * <u>category</u>: The log category for the logger. See above notes on _hierarchical logging categories_. 
 
-__Note__: The [Logger] instance will default to [Level.ERROR] if the category is not configured (and none of it's "dot parents").
+__Note__: The [Logger] instance will default to [Level.ERROR] if the category is not configured (and none of its "dot parents").
 
 ```javascript
 const logging = require('@jenkins-cd/logging');
@@ -52,7 +52,7 @@ This function is intended for use by browser tooling (e.g. Chrome Developer Exte
 
 This logging package uses browser [`localStorage`](https://developer.mozilla.org/en/docs/Web/API/Window/localStorage) for storing log settings. __We have a Developer tool Extension for the Google Chrome browser__ (see below), making it easy to discover and configure log levels in Chrome. For other browsers (see below also), you need to use their "Storage Inspector" to discover and configure the log levels. Of course, it's also possible to use the Developer Console in any browser to programmatically set log levels via the [Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage).
 
-Configuring log levels in the Storage Inspector of any of the Browsers is a simple process of locating the key for the log category of interest (all log category keys have a "`jenkins-instance/logging/categories:`" prefix) and changing it's value to the desired [Level] i.e. `DEBUG`, `LOG`, `INFO`, `WARN`, `ERROR`. See the following sections for specific examples. 
+Configuring log levels in the Storage Inspector of any of the Browsers is a simple process of locating the key for the log category of interest (all log category keys have a "`jenkins-instance/logging/categories:`" prefix) and changing its value to the desired [Level] i.e. `DEBUG`, `LOG`, `INFO`, `WARN`, `ERROR`. See the following sections for specific examples. 
 
 ## Google Chrome
 
@@ -60,7 +60,7 @@ The easiest way to configure logging levels in Google Chrome is via the [Jenkins
 
 ![chrome-config](./images/chrome-extension.png)
 
-Of course, it's also possible use Google Chrome's Storage inspector. 
+Of course, it's also possible to use Google Chrome's Storage inspector. 
 
 ![chrome-config](./images/chrome-config.png)
 
@@ -74,7 +74,7 @@ Note that Firefox has a useful "filter" field for narrowing the visible set of s
 
 ## Safari
 
-The following image shows Safari's Storage inspector. Note that the Developer tools in Safari is not enabled by default (and therefore the Storage Inspector), so you'll need to enable it [in the Advanced section of the Browser Settings](./images/safari-settings.png) if it's not already enabled. 
+The following image shows Safari's Storage inspector. Note that Safari's Developer Tools are not enabled by default (and therefore neither is the Storage Inspector), so you'll need to enable them [in the Advanced section of the Browser Settings](./images/safari-settings.png) if they are not already enabled. 
 
 ![safari-config](./images/safari-config.png)
 
